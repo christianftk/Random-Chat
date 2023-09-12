@@ -1,0 +1,9 @@
+#!/bin/bash
+
+
+$(gcc -pthread -o progetto/server1 progetto/servertcp1.c progetto/chat_struct/chat_s.c progetto/client_struct/client_s.c progetto/list/list_s.c)
+$(gcc -pthread -o progetto/server2 progetto/servertcp2.c progetto/chat_struct/chat_s.c progetto/client_struct/client_s.c progetto/list/list_s.c)
+$(gcc -pthread -o progetto/server3 progetto/servertcp3.c progetto/chat_struct/chat_s.c progetto/client_struct/client_s.c progetto/list/list_s.c)
+$(gcc -pthread -o progetto/server4 progetto/servertcp4.c progetto/chat_struct/chat_s.c progetto/client_struct/client_s.c progetto/list/list_s.c)
+
+echo "SUCCESS"

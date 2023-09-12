@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    android:backgroundTint="#34DCC1E1"
+    android:backgroundTintMode="src_atop"
+    tools:context=".GUI.Chat">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/utente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/corners_text_client"
+        android:fontFamily="@font/roboto_bold"
+        android:maxEms="30"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingHorizontal="8dp"
+        android:text="NomePersona"
+        android:textAlignment="textEnd"
+        android:textSize="20sp"
+        app:flow_horizontalAlign="end"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="71dp"
+        android:background="@drawable/corners_text_server"
+        android:fontFamily="@font/roboto_bold_italic"
+        android:maxEms="30"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingHorizontal="8dp"
+        android:text="Server"
+        android:textAlignment="textStart"
+        android:textSize="20sp"
+        app:flow_horizontalAlign="start"
+        app:layout_constraintEnd_toStartOf="@+id/timer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:fillViewport="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toTopOf="@+id/chatBox"
+        app:layout_constraintTop_toBottomOf="@id/server">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/chatBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/server"></LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/cercaPulsante"
+        android:layout_width="80dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/roboto_bold"
+        android:onClick="nuovaChatpremuto"
+        android:paddingHorizontal="0dp"
+        android:text="Cerca"
+        android:textColor="@color/mtrl_btw_text_color_selector"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/chatBox"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/corners_text_chat"
+        android:ems="10"
+        android:fontFamily="@font/roboto_medium"
+        android:hint="Chatta. . ."
+        android:inputType="textCapSentences"
+        android:overScrollMode="ifContentScrolls"
+        android:paddingStart="8dp"
+        android:paddingEnd="94dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cercaPulsante"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cercaPulsante"
+        app:layout_constraintTop_toTopOf="@+id/cercaPulsante" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/inviaButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/round_button"
+        android:onClick="InviaPremuto"
+        android:padding="8dp"
+        android:src="@drawable/ic_baseline_send_24"
+        app:layout_constraintBottom_toBottomOf="@+id/chatBox"
+        app:layout_constraintEnd_toEndOf="@+id/chatBox"
+        app:layout_constraintTop_toTopOf="@+id/chatBox" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/btn_color_selector"
+        android:fontFamily="@font/roboto_black"
+        android:paddingHorizontal="8dp"
+        android:text="01:00"
+        android:textColor="#FB0D0D"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/mic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_baseline_mic_on_24"
+        android:background="@drawable/round_button"
+        android:padding="2dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/chatBox"
+        app:layout_constraintEnd_toStartOf="@+id/inviaButton"
+        app:layout_constraintTop_toTopOf="@+id/chatBox" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFc6a3ff</color>
+    <color name="purple_500">#FF9474cc</color>
+    <color name="purple_700">#FF64489b</color>
+    <color name="pink_200">#FFffeeff</color>
+    <color name="pink_500">#FFf8bbd0</color>
+    <color name="pink_700">#FFc48b9f</color>
+    <color name="pink_title">#FFe36be3</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="mtrl_btw_text_color_selector">#D7FFFFFF</color>
+    <color name="btn_color_selector">#D7FFFFFF</color>
+</resources>
